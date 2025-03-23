@@ -1,0 +1,11 @@
+Flask
+vertex-ai
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-core
+google-cloud
+numpy
+pandas
+python-dotenv
+grpcio
