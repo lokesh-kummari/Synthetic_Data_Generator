@@ -75,7 +75,16 @@ Our platform increases resilience by providing synthetic datasets that mimic rea
 Organizations can save costs associated with acquiring and managing sensitive data. By using synthetic data, businesses and research organizations can conduct analyses, build machine learning models, and optimize algorithms without the financial burden of securing sensitive real-world datasets. This **cost-effective solution** makes data access and research more affordable and scalable.
 
 ---
-![Project Video](assests/output_vid.mp4)
+
+## 🎥 Project Video Demonstration
+
+Here is a demonstration video of the project:
+
+<video width="600" controls>
+  <source src="https://raw.githubusercontent.com/lokesh-kummari/Synthetic_Data_generator/main/assests/output_vid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 🔗 **Related Links**:
 - [GitHub Repository](https://github.com/lokesh-kummari/Synthetic_Data_Generator)
