@@ -2,11 +2,15 @@ import os
 from flask import Flask, render_template, request
 import pandas as pd
 import json
+from dotenv import load_dotenv
 import vertexai
 from google.oauth2 import service_account
 from vertexai.generative_models import GenerativeModel, Part, Content
 import numpy as np
-
+import os
+import json
+import tempfile
+load_dotenv() 
 # Initialize Flask app
 app = Flask(__name__)
 
@@ -14,11 +18,49 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'  # Directory where files will be saved
 app.config['ALLOWED_EXTENSIONS'] = {'csv'}  # Allowed file extensions
 
-# Vertex AI setup
-PROJECT_ID = "inner-analyst-454416-s9"  # Your project ID
-LOCATION = "us-central1"  # Your project location
-credentials = service_account.Credentials.from_service_account_file("keys.json")
-vertexai.init(project=PROJECT_ID, location=LOCATION, credentials=credentials)
+# # Vertex AI setup
+# PROJECT_ID = os.getenv("PROJECT_ID")  # Load project ID from .env
+# LOCATION = os.getenv("LOCATION")  # Load location from .env
+# credentials = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+# vertexai.init(project=PROJECT_ID, location=LOCATION, credentials=credentials)
+
+# Load the environment variable that contains the JSON credentials
+credentials_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+
+if credentials_json:
+    try:
+        credentials = json.loads(credentials_json)
+        print("Google application credentials loaded successfully.")
+
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix="-google-credentials.json")
+        with open(temp_file.name, "w") as f:
+            json.dump(credentials, f)
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = temp_file.name
+        print(f"Google application credentials set to temporary file: {temp_file.name}")
+
+        try:
+            credentials = service_account.Credentials.from_service_account_file(temp_file.name)
+            vertexai.init(
+                project=os.getenv('PROJECT_ID'),
+                location=os.getenv('LOCATION'),
+                credentials=credentials
+            )
+            print("Vertex AI initialized successfully.")
+            # Keep temp_file open until after vertexai.init()
+        except Exception as e:
+            print(f"Failed to initialize Vertex AI: {e}")
+            exit(1)
+        finally:
+            # Ensure the file is deleted even if exceptions occur
+            os.remove(temp_file.name)
+
+    except json.JSONDecodeError as e:
+        print(f"Error decoding the JSON credentials: {e}")
+        exit(1)
+else:
+    print("Environment variable GOOGLE_APPLICATION_CREDENTIALS_JSON is not set.")
+    exit(1)
+
 
 # Function to check if a file has an allowed extension
 def allowed_file(filename):
