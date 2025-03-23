@@ -1,0 +1,39 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Files related to IDEs
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.bak
+*.swp
+
+# Data files
+generated_data/
+
+# Credentials file (keys.json) - Do not push to GitHub
+keys.json
+
+# Dataset upload folder
+uploads/
+
+# VS Code settings
+.settings/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db

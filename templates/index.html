@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthetic Dataset Generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            background-image: url('/static/A_soft_and_professional_background_image_suitable_.png');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 1000px;
+            margin-top: 60px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #2D3E50;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        ol {
+            font-size: 16px;
+            color: #555;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        input[type="file"], input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            color: #333;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin-top: 40px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+
+            pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Title Section -->
+        <h1>Synthetic Dataset Generator</h1>
+
+        <!-- Introduction Section -->
+        <div class="intro">
+            <p>Welcome to the Synthetic Dataset Generator! This platform allows you to generate realistic synthetic datasets for machine learning model training while ensuring privacy. Here's how it works:</p>
+            <ol>
+                <li><strong>Data Categorization:</strong> We analyze your uploaded CSV file and categorize the data into different types: <strong>Numeric</strong>, <strong>Categorical</strong>, <strong>Nominal</strong>, and <strong>Ordinal</strong>.</li>
+                <li><strong>Sensitive Data Masking:</strong> If the data contains sensitive information such as <strong>names</strong>, <strong>email addresses</strong>, <strong>phone numbers</strong>, or <strong>unique identifiers</strong>, we apply advanced masking techniques to protect privacy (e.g., Caesar Cipher).</li>
+                <li><strong>Data Generation:</strong> Based on the statistics and characteristics of the data (e.g., mean, proportions), synthetic data is generated while preserving privacy and statistical consistency.</li>
+                <li><strong>Decryption:</strong> For authorized access, a separate decryption portal is available where you can decrypt the sensitive data if required.</li>
+            </ol>
+        </div>
+
+        <!-- Card 1: Process Flow -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Process Flow</h5>
+                <ol>
+                    <li>Step 1: Get basic profile data and send it to LLM to determine column type and sensitivity.</li>
+                    <li>Step 2: Mask sensitive data using encryption techniques.</li>
+                    <li>Step 3: Generate statistical data based on the input.</li>
+                    <li>Step 4: Output synthetic data.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Card 2: Display Step 1 (Column Profile) -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Step 1: Column Profile</h5>
+                {% if parsed_json %}
+                    <pre>{{ parsed_json | tojson }}</pre>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Card 3: Display Step 2 (Encryption Example) -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Step 2: Sensitive Data Masking</h5>
+                {% if masked_data %}
+                    <pre>{{ masked_data | tojson }}</pre>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Card 4: Display Column Stats -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Step 3: Column Statistics</h5>
+                {% if column_stats %}
+                    <pre>{{ column_stats | tojson }}</pre>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Card 5: Display Generated Data -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Generated Synthetic Data</h5>
+                {% if synthetic_data %}
+                    <pre>{{ synthetic_data }}</pre>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- File Upload Form -->
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="file" class="form-label">Choose a CSV file to upload:</label>
+                <input type="file" name="file" id="file" accept=".csv" required class="form-control">
+            </div>
+
+            <!-- Input for Number of Records -->
+            <div class="mb-4">
+                <label for="num_records" class="form-label">Number of Records to Generate:</label>
+                <input type="number" name="num_records" id="num_records" class="form-control" value="20" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Generate Data</button>
+        </form>
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
