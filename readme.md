@@ -74,13 +74,17 @@ Our platform increases resilience by providing synthetic datasets that mimic rea
 ### 💰 **Cost-Effective Solution:**
 Organizations can save costs associated with acquiring and managing sensitive data. By using synthetic data, businesses and research organizations can conduct analyses, build machine learning models, and optimize algorithms without the financial burden of securing sensitive real-world datasets. This **cost-effective solution** makes data access and research more affordable and scalable.
 
+
+https://github.com/user-attachments/assets/73f0a6f7-5ddb-4a33-9706-b8752b845f01
+
+
 ---
 
 ## 🎥 Project Video Demonstration
 
 Here is a demonstration video of the project:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zBkrPRffBAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 🔗 **Related Links**:
