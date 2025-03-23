@@ -37,6 +37,7 @@ This solution provides a **secure**, **privacy-preserving** alternative for work
 - **🔐 Sensitive Data Masking**: Mask sensitive information like **names**, **phone numbers**, and **unique identifiers** using techniques like **Caesar Cipher**.
 - **🛡️ Data Security**: Generate **secure**, privacy-preserving synthetic datasets suitable for testing and training **machine learning models**.
 
+## Live Link
 
 You can access the live version of the **Synthetic Dataset Generator** by clicking the link below:
 
