@@ -1,4 +1,4 @@
-# 🌾 **Synthetic Dataset Generator** 🌿
+# 🔐 **Synthetic Dataset Generator** 
 
 ## ⚠️ **Important Note**
 
@@ -8,9 +8,9 @@ Please go through the code and description of the **synthetic data generation pr
 
 ## 🌟 **Brief**
 
-In today’s world, **data privacy** is a key concern, especially when working with sensitive data. Our AI-driven solution generates **synthetic datasets** that preserve **privacy** and **statistical consistency**. By analyzing the original dataset's statistical characteristics, we use machine learning techniques to generate synthetic data that mimics the original dataset without exposing sensitive information. 
+In today’s world, **data privacy** is a key concern, especially when working with sensitive data. Our AI-driven solution generates **synthetic datasets** that preserve **privacy** and **statistical consistency**. By analyzing the original dataset's statistical characteristics, we use LLM's to  generate synthetic data that mimics the original dataset without exposing sensitive information. 
 
-This solution provides a **secure**, **privacy-preserving** alternative for working with datasets, ensuring that **data-driven decisions** can still be made without compromising **user privacy**. 🌱
+This solution provides a **secure**, **privacy-preserving** alternative for working with datasets, ensuring that **data-driven decisions** can still be made without compromising **user privacy**. 
 
 ## 🛠️ **Technology Stack**
 
@@ -40,9 +40,9 @@ For more information on how to use this application, please refer to the detaile
 
 ---
 
-## 🌾 **How Will It Be Able to Solve the Problem?**
+## 🛡️**How Will It Be Able to Solve the Problem?**
 
-### 🌱 **Optimized Data Generation:**
+###  **Optimized Data Generation:**
 The **Synthetic Dataset Generator** optimizes data generation by using statistical methods to generate synthetic data that closely mimics the **original dataset**. This allows organizations to perform analyses, develop models, and conduct research while ensuring **data privacy**. Our system maintains the **mean**, **standard deviation**, and other key characteristics of the original dataset, ensuring the synthetic data is statistically accurate while removing sensitive information such as personal details, financial records, and more.
 
 ### 📅 **Improved Data Utilization:**
