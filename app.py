@@ -131,8 +131,8 @@ def caesar_cipher_mask(text, shift=3):
     return masked_text
 
 
-# Load the DataFrame and create the profiling report
-df = pd.read_csv("uploads/sysn.csv")
+# # Load the DataFrame and create the profiling report
+# df = pd.read_csv("uploads/sysn.csv")
 
 # Function to profile the dataset and compute statistics for different types
 def profile_data(df):
