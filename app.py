@@ -24,6 +24,7 @@ vertexai.init(project=PROJECT_ID, location=LOCATION, credentials=credentials)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
+
 # Helper function to convert non-serializable types to native Python types
 def convert_to_native_types(data):
     if isinstance(data, dict):
@@ -193,7 +194,7 @@ def home():
                 masked_data = convert_to_native_types(masked_data)
 
                 return render_template('index.html', 
-                                       synthetic_data=synthetic_data, 
+                                       synthetic_data=synthetic_data.strip("```csv\n"), 
                                        parsed_json=parsed_json, 
                                        column_stats=column_stats,
                                        masked_data=masked_data)
