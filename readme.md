@@ -33,10 +33,14 @@ For more information on how to use this application, please refer to the detaile
 
 ## 💡 **Example Workflow**
 
-1. **Upload**: Upload a CSV file containing original data.
+## 🌱 **How It Works**
+
+1. **Upload**: Upload a CSV file containing the original data.
 2. **Analyze**: The application categorizes columns and determines privacy-sensitive data.
-3. **Generate**: Synthetic data is generated based on statistical properties while ensuring privacy.
-4. **Download**: Download the synthetic data for further use in machine learning models.
+3. **Data masking** is also performed on sensitive columns.
+4. **Generate**: Synthetic data is generated based on statistical properties while ensuring privacy. 
+5. **Download**: Download the synthetic data for further use in machine learning models.
+
 
 ---
 
