@@ -37,6 +37,20 @@ This solution provides a **secure**, **privacy-preserving** alternative for work
 - **🔐 Sensitive Data Masking**: Mask sensitive information like **names**, **phone numbers**, and **unique identifiers** using techniques like **Caesar Cipher**.
 - **🛡️ Data Security**: Generate **secure**, privacy-preserving synthetic datasets suitable for testing and training **machine learning models**.
 
+
+You can access the live version of the **Synthetic Dataset Generator** by clicking the link below:
+
+[**Live Demo**](https://synthetic-data-generator-exzf.onrender.com)
+
+
+## Sample Dataset
+
+Here is a sample dataset in CSV format that you can use with the **Synthetic Dataset Generator**. It contains various columns such as numeric, categorical, and nominal.
+
+### [Download Sample Dataset](sample_data/sysn.csv)
+
+You can download the sample dataset from the above link.
+
 ---
 
 For more information on how to use this application, please refer to the detailed instructions in the repository.

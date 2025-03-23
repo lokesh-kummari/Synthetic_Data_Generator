@@ -232,7 +232,6 @@ def home():
                         })
 
                 # Convert all non-serializable types to native Python types
-                parsed_json = convert_to_native_types(parsed_json)
                 column_stats = convert_to_native_types(column_stats)
                 masked_data = convert_to_native_types(masked_data)
 
