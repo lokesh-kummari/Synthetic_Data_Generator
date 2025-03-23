@@ -26,8 +26,8 @@ This solution provides a **secure**, **privacy-preserving** alternative for work
 
 | **Frontend**   | **Backend**   | **ML Library**   | **LLMs**        | **Database**   | **Deployment**  | **Version Control** |
 |----------------|---------------|------------------|-----------------|----------------|-----------------|---------------------|
-| 🌐 **HTML5**   | 🐍 **FastAPI** | 📊 **Scikit-Learn** | 🤖 **Gemini 1.5 Pro** | -              | 🌐 **Render**          | 🐙 **GitHub**       |
-| 🎨 **CSS3**    | 🖥️ **Python (Flask)** | 📈 **Pandas, Numpy** | -               | -              | 🧑‍💻 **Render**  | 🔧 **GitHub**       |
+| 🌐 **HTML5**   | 🐍 **Flask** | 📊 **Scikit-Learn** | 🤖 **Gemini 1.5 Pro** | -              | 🌐 **onRender**          | 🐙 **GitHub**       |
+| 🎨 **CSS3**    | 🖥️ **Python (Flask)** | 📈 **Pandas, Numpy** | -               | -              | 🧑‍💻 **onRender**  | 🔧 **GitHub**       |
 | 💻 **JavaScript** |               |                  |                 |                |                 |                     |
 
 ## 🔑 **Key Features**
@@ -36,6 +36,7 @@ This solution provides a **secure**, **privacy-preserving** alternative for work
 - **📊 Statistical Consistency**: Ensure that generated datasets preserve key **statistical properties** of the original data.
 - **🔐 Sensitive Data Masking**: Mask sensitive information like **names**, **phone numbers**, and **unique identifiers** using techniques like **Caesar Cipher**.
 - **🛡️ Data Security**: Generate **secure**, privacy-preserving synthetic datasets suitable for testing and training **machine learning models**.
+
 
 ## Live Link
 
