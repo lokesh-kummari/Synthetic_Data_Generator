@@ -80,10 +80,7 @@ Organizations can save costs associated with acquiring and managing sensitive da
 
 Here is a demonstration video of the project:
 
-<video width="600" controls>
-  <source src="https://raw.githubusercontent.com/lokesh-kummari/Synthetic_Data_generator/main/assests/output_vid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zBkrPRffBAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 🔗 **Related Links**:
