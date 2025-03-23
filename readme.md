@@ -1,38 +1,35 @@
-# Synthetic Dataset Generator
+# 🌾 Synthetic Dataset Generator 🌿
 
+## ⚠️ Important Note
 
-**Synthetic Dataset Generator** is a platform that allows you to generate synthetic datasets for machine learning model training while ensuring privacy. The tool analyzes the uploaded dataset, categorizes the data, applies necessary masking techniques for sensitive information, and generates synthetic data with preserved statistical properties.
+This application is designed to generate synthetic datasets while maintaining privacy. We ensure the generated datasets respect the statistical properties of the original data while masking any sensitive information such as names, phone numbers, and unique identifiers.
 
-This project is not about traditional dataset generation but focuses on **generating data with privacy**. This ensures that sensitive information (such as names, contact details, or IDs) is masked while still maintaining the overall structure and statistical consistency of the data.
+Please go through the code and description of the synthetic data generation process in this repository: [GitHub Repository](https://github.com/your-username/Synthetic-Data-Generator)
 
-## Features
+## 🌟 Brief
 
-- **Data Categorization**: Automatically categorizes the data into numeric, categorical, ordinal, and nominal types.
-- **Sensitive Data Masking**: Ensures privacy by applying encryption techniques (e.g., Caesar Cipher) to sensitive columns such as names, email addresses, phone numbers, and unique identifiers.
-- **Synthetic Data Generation**: Based on the statistical characteristics of the data (e.g., mean, skewness, kurtosis, and proportions), synthetic data is generated.
-- **Privacy Preserved**: The generated synthetic data maintains the same distribution while masking sensitive information.
+In today’s world, data privacy is a key concern, especially when working with sensitive data. Our AI-driven solution generates synthetic datasets that preserve privacy and statistical consistency. By analyzing the original dataset's statistical characteristics, we use machine learning techniques to generate synthetic data that mimics the original dataset without exposing sensitive information. 
 
-## Technology Stack
+This solution provides a secure, privacy-preserving alternative for working with datasets, ensuring data-driven decisions can still be made without compromising user privacy. 🌱
 
-| Technology   | Description                                                             | Logo                                                              |
-|--------------|-------------------------------------------------------------------------|-------------------------------------------------------------------|
-| **Python**   | Core language used for backend development                              | ![Python](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg) |
-| **Flask**    | Web framework for building the web application                          | ![Flask](https://upload.wikimedia.org/wikipedia/commons/9/99/Flask_logo.svg) |
-| **Jupyter**  | Interactive notebooks for generating and testing synthetic data models  | ![Jupyter](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jupyter_logo.svg/1280px-Jupyter_logo.svg.png) |
-| **Vertex AI**| Google Cloud AI for dataset analysis and predictions                    | No Logo (Google Cloud)                                            |
-| **Pandas**   | Data manipulation and analysis library                                  | No Logo (Pandas)                                                   |
-| **HTML/CSS/JS**| Frontend technologies for rendering the user interface               | No Logo (Standard web technologies)                               |
+## 🛠️ Technology Stack
 
-## How It Works
+| **Frontend**   | **Backend**   | **ML Library**   | **LLMs**        | **Database**   | **Deployment**  | **Version Control** |
+|----------------|---------------|------------------|-----------------|----------------|-----------------|---------------------|
+| HTML5          | FastAPI       | Scikit-Learn     | Gemini 1.5 Pro  | -              | Render          | GitHub              |
+| CSS3           | Python (Flask)| Pandas, Numpy    |                 |                |                 |                     |
+| JavaScript     |               |                  |                 |                |                 |                     |
 
-1. **Upload Dataset**: The user uploads a CSV dataset through the web interface.
-2. **Analyze Columns**: The tool analyzes the dataset and classifies each column (numeric, categorical, ordinal, nominal). It also detects sensitive data.
-3. **Mask Sensitive Data**: Sensitive information is masked using encryption techniques (e.g., Caesar Cipher).
-4. **Generate Synthetic Data**: Synthetic data is generated based on the statistical properties of the original dataset, ensuring the privacy of sensitive data.
-5. **Download Generated Data**: The synthetic data is presented to the user, ready for use in training machine learning models.
+## Key Features
 
-## How to Use
+📊 **Privacy-Preserving Data Generation**: Generate synthetic data while maintaining privacy.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/Synthetic_Data_Generator.git
+🚀 **Statistical Consistency**: Ensure that generated datasets preserve key statistical properties.
+
+🔒 **Sensitive Data Masking**: Mask sensitive information like names, phone numbers, and unique identifiers using techniques like Caesar Cipher.
+
+🌍 **Data Security**: Generate secure, privacy-preserving synthetic datasets suitable for testing and training machine learning models.
+
+---
+
+For more information on how to use this application, please refer to the detailed instructions in the repository.
