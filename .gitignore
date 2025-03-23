@@ -26,9 +26,6 @@ generated_data/
 # Credentials file (keys.json) - Do not push to GitHub
 keys.json
 
-# Dataset upload folder
-uploads/
-
 # VS Code settings
 .settings/
 

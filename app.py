@@ -232,6 +232,7 @@ def home():
                         })
 
                 # Convert all non-serializable types to native Python types
+                parsed_json = convert_to_native_types(parsed_json)
                 column_stats = convert_to_native_types(column_stats)
                 masked_data = convert_to_native_types(masked_data)
 
@@ -247,4 +248,4 @@ def home():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    app.run(debug=True, host='0.0.0.0', port=int(os.getenv('PORT', 8000)))
