@@ -33,7 +33,7 @@ For more information on how to use this application, please refer to the detaile
 
 ## 💡 **Example Workflow**
 
-## 🌱 **How It Works**
+## 🔒 **How It Works**
 
 1. **Upload**: Upload a CSV file containing the original data.
 2. **Analyze**: The application categorizes columns and determines privacy-sensitive data.
@@ -46,7 +46,7 @@ For more information on how to use this application, please refer to the detaile
 
 ## 🛡️**How Will It Be Able to Solve the Problem?**
 
-###  **Optimized Data Generation:**
+### 🔒**Optimized Data Generation:**
 The **Synthetic Dataset Generator** optimizes data generation by using statistical methods to generate synthetic data that closely mimics the **original dataset**. This allows organizations to perform analyses, develop models, and conduct research while ensuring **data privacy**. Our system maintains the **mean**, **standard deviation**, and other key characteristics of the original dataset, ensuring the synthetic data is statistically accurate while removing sensitive information such as personal details, financial records, and more.
 
 ### 📅 **Improved Data Utilization:**
