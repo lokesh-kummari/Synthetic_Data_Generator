@@ -41,6 +41,37 @@ This solution provides a **secure**, **privacy-preserving** alternative for work
 
 For more information on how to use this application, please refer to the detailed instructions in the repository.
 
+## 🚀 Process Flow
+
+The **Synthetic Dataset Generator** follows a well-structured process to generate synthetic datasets for machine learning, ensuring privacy at every step. Below is a detailed overview of how the platform works:
+
+### 1. **Upload a CSV File**
+   - **What Happens**: The first step is uploading your original dataset in CSV format. This is done through the user interface where you are prompted to select the file from your system. Once the file is selected, the system will verify that the file is a CSV file and save it for further processing.
+   - **Why It's Important**: The uploaded dataset serves as the basis for generating synthetic data. The system needs to analyze your data in order to generate new data that closely resembles the original dataset while maintaining its statistical properties.
+
+### 2. **Data Categorization**
+   - **What Happens**: After the file is uploaded, the system will examine the dataset to categorize the columns. It identifies the type of each column (e.g., Numeric, Categorical, Nominal, or Ordinal). For example, numeric columns may contain integers or floats, categorical columns may contain predefined categories (like "Male" or "Female"), and ordinal columns may represent ranked data.
+   - **Why It's Important**: Categorizing the columns is essential because different types of data require different methods of handling during the data generation process. For instance, numeric columns are handled differently than categorical columns when generating synthetic data, so proper categorization ensures accurate results.
+
+### 3. **Sensitive Data Masking**
+   - **What Happens**: The system scans through your dataset to detect sensitive information such as personal identifiers (names, phone numbers, emails, etc.). If any such sensitive data is found, it is automatically masked to prevent privacy breaches. For example, a name might be encrypted, or a phone number might be altered using an encoding technique.
+   - **Why It's Important**: Masking sensitive data ensures that no private or personally identifiable information is exposed in the generated synthetic dataset. It is a key step for maintaining privacy and adhering to data protection regulations (such as GDPR or HIPAA), ensuring that the synthetic data is safe to use.
+
+### 4. **Synthetic Data Generation**
+   - **What Happens**: Once the dataset has been categorized and sensitive information is masked, the system proceeds to generate synthetic data. The synthetic data is created by preserving the statistical properties of the original dataset (e.g., mean, standard deviation, and correlations between columns). This is done by using advanced machine learning models that understand the distribution of the original data and create new data points that follow the same distribution.
+   - **Why It's Important**: Synthetic data generation allows for the creation of new datasets that mimic the characteristics of the original data. This is particularly useful when the original data is too sensitive to share or use directly, but synthetic data can serve as a good substitute for training machine learning models or performing analysis without violating privacy concerns.
+
+### 5. **Download Synthetic Data (CSV Format)**
+   - **What Happens**: After the synthetic data is generated, the platform provides an option to download the generated dataset in CSV format. A download button is made available on the user interface, allowing users to save the newly generated data to their local system.
+   - **Why It's Important**: The ability to download the synthetic data is the final step in the process. After the synthetic data has been generated, users can use it in their machine learning projects or any other data-related tasks. This downloadable CSV file allows users to easily integrate the synthetic dataset into their workflow.
+
+### 6. **Optional Decryption (For Authorized Users)**
+   - **What Happens**: In case sensitive data was masked during the process, authorized users have the option to decrypt the sensitive information. This step can be performed through a secure decryption portal if users have the necessary permissions to access the original data.
+   - **Why It's Important**: This optional step ensures that if authorized personnel need access to the original sensitive data, they can decrypt it securely. It offers flexibility for scenarios where the original data might be required for analysis or other purposes, but still ensures data security during the data generation process.
+
+---
+
+
 ## 💡 **Example Workflow**
 
 ## 🔒 **How It Works**
