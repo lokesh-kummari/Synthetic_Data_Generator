@@ -1,5 +1,15 @@
 # 🔐 **Synthetic Dataset Generator** 
 
+
+### AI-based Synthetic Dataset Generator
+
+**Use Case**:  
+Build a platform that generates synthetic but realistic datasets for machine learning model training while maintaining privacy. This is particularly helpful for industries or sectors that face challenges in obtaining large datasets due to privacy concerns. The platform ensures that the synthetic datasets maintain statistical properties of the original data, while protecting sensitive information and providing valuable data for model training.
+
+This tool is designed to bridge the gap between privacy constraints and the need for large, high-quality datasets in fields like healthcare, finance, and more.
+
+---
+
 ## ⚠️ **Important Note**
 
 This application is designed to generate **synthetic datasets** while maintaining **privacy**. We ensure the generated datasets preserve the statistical properties of the original data while masking any **sensitive information** such as names, phone numbers, and unique identifiers.
