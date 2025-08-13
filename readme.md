@@ -133,14 +133,6 @@ Organizations can save costs associated with acquiring and managing sensitive da
 
 ---
 
-## 🎥 Project Video Demonstration
-
-Here is a demonstration video of the project:
-
-
-
-https://github.com/user-attachments/assets/a830bd38-1481-4ebf-9219-324cfb06f444
-
 
 
 ## Conclusion
